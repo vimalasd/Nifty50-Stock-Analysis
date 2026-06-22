@@ -155,24 +155,25 @@ Displays:
 ## Project Structure
 
 ```text
-yaml_files/
-ticker_csvs/
+data/
+├── ticker_csvs/
+└── yaml_files/
 
-sector_data.csv
+Sector_data.csv
 analysis.db
 
-yaml_to_csv.py
-stock_analysis.ipynb
-
 app.py
+stock_analysis.ipynb
+yaml_to_csv.py
+
 
 README.md
 ```
 
 | File / Folder | Purpose |
 |--------|---------|
-| `yaml_files/` | Raw stock data in YAML format |
-|`ticker_csvs/`|  Stock_wise     csv files |
+| `data/yaml_files/` | Raw stock data in YAML format |
+| `data/ticker_csvs/`|  Stock-wise csv files |
 | `Sector_data.csv` | Sector mapping file |
 | `yaml_to_csv.py` | Extracts YAML data and creates stock CSV files |
 | `stock_analysis.ipynb` | Stock analysis and stores results in SQLite |
