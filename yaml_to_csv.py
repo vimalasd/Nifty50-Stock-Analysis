@@ -12,16 +12,11 @@ for file in os.listdir(folder_path):
         all_data.append(df)
 df1=pd.concat(all_data,ignore_index=True)
 print(df1.shape) 
-print(df1["date"].dtype) 
+print(df1.dtypes) 
 
 # Data Cleaning
 df1["date"] = pd.to_datetime(df1["date"], errors="coerce")
 print(df1["date"].dtype) 
-df1 = df1.sort_values(["Ticker", "date"])
-
-df1 = df1.reset_index(drop=True)
-
-print(df1.shape)   
 output_folder = r"D:\stock_project\ticker_csvs"
 os.makedirs(output_folder, exist_ok=True)
 
